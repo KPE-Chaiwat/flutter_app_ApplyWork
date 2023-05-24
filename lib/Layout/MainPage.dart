@@ -49,18 +49,15 @@ class _HomePageState extends State<HomePage> {
           }
         }
 
-        return SafeArea(
-          // maintainBottomViewPadding: true,
-          child: Scaffold(
-            // appBar: AppBar(title: const Text('SharedPreferences Demo'), actions: [
-            //   IconButton(
-            //       onPressed: () {
-            //         context.read<SharedPreferanceCubit>().SaveText_LogOUT();
-            //       },
-            //       icon: const Icon(Icons.logout))
-            // ]),
-            body: checkLogin(),
-          ),
+        return Scaffold(
+          // appBar: AppBar(title: const Text('SharedPreferences Demo'), actions: [
+          //   IconButton(
+          //       onPressed: () {
+          //         context.read<SharedPreferanceCubit>().SaveText_LogOUT();
+          //       },
+          //       icon: const Icon(Icons.logout))
+          // ]),
+          body: SafeArea(child: checkLogin()),
         );
       },
     );

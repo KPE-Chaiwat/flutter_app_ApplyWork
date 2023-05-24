@@ -9,8 +9,8 @@ class ChengePage_Cubit extends Cubit<Widget> {
   ChengePage_Cubit() : super(Page0());
 
   /// Toggles the current brightness between light and dark.
-  Future<void> changePage(Widget page) async {
-    Widget output = page;
+  Future<void> changePage({required Widget go}) async {
+    Widget output = go;
     emit(output);
   }
 }

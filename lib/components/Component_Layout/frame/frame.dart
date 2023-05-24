@@ -1,19 +1,22 @@
 import 'package:flutter/material.dart';
 
-import '../appbars/appbar.dart';
+import '../../../Layout/page1/SubPage1/component_SP1/appbars/appbarSP1.dart';
 import '../buttomBar/buttombar.dart';
 
 class WidgetFrame extends StatefulWidget {
   WidgetFrame({
     required this.body,
     required this.modeFrame,
+    this.appbar,
     this.bgBody,
     this.height_widght,
     super.key,
   });
   Widget body;
+  Widget? appbar;
   int modeFrame;
   Color? bgBody;
+
   Function(double maxheight, double maxwidth)? height_widght;
 
   @override
@@ -23,6 +26,7 @@ class WidgetFrame extends StatefulWidget {
 class _WidgetFrameState extends State<WidgetFrame> {
   @override
   Widget build(BuildContext context) {
+    print(widget.modeFrame);
     return LayoutBuilder(builder: (BuildContext c, BoxConstraints constraints) {
       return Container(
         height: constraints.maxHeight,
@@ -38,7 +42,7 @@ class _WidgetFrameState extends State<WidgetFrame> {
           //mainAxisAlignment: mainAxisAlignment(mode: widget.modeFrame),
           children: [
             if (widget.modeFrame == 0) ...{
-              AppBarCustom(),
+              widget.appbar ?? SizedBox(),
               Expanded(
                 child: Container(
                   // height: constraints.maxHeight - heightAppbar,
@@ -60,7 +64,7 @@ class _WidgetFrameState extends State<WidgetFrame> {
               ButtomBar()
             },
             if (widget.modeFrame == 2) ...{
-              AppBarCustom(),
+              widget.appbar ?? SizedBox(),
               Expanded(
                 child: Container(
                   // height: constraints.maxHeight - heightAppbar,
@@ -70,7 +74,7 @@ class _WidgetFrameState extends State<WidgetFrame> {
                 ),
               ),
               ButtomBar()
-            } else ...{
+            } else if (widget.modeFrame == 3) ...{
               Expanded(
                 child: Container(
                   // height: constraints.maxHeight - heightAppbar,

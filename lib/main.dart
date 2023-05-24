@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      //theme: ThemeData(primarySwatch: Colors),
+      //  theme: ThemeData(scaffoldBackgroundColor: Color(0xfffed8c3)),
       title: 'Flutter SharedPreferences Demo',
       home: BlocProvider(
         create: (context) => SharedPreferanceCubit(),

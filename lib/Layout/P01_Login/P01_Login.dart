@@ -22,7 +22,7 @@ class _LogInpageState extends State<LogInpage> {
   Widget build(BuildContext context) {
     double maxheight = MediaQuery.of(context).size.height;
     return WidgetFrame(
-      modeFrame: 4,
+      modeFrame: 3,
       bgBody: Color(0xfffbcbb0),
       body: Stack(
         children: [
