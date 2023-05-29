@@ -26,7 +26,6 @@ class WidgetFrame extends StatefulWidget {
 class _WidgetFrameState extends State<WidgetFrame> {
   @override
   Widget build(BuildContext context) {
-    print(widget.modeFrame);
     return LayoutBuilder(builder: (BuildContext c, BoxConstraints constraints) {
       return Container(
         height: constraints.maxHeight,
