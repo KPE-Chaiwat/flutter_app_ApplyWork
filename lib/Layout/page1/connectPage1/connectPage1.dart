@@ -24,19 +24,20 @@ class _ConnectPage1State extends State<ConnectPage1> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    for (var element in sectionsV4) {
-      name.add(element.name ?? '');
-      valueList.add(element.value ?? 0.0);
-    }
   }
 
   @override
   Widget build(BuildContext context) {
+    for (var element in sectionsV4) {
+      name.add(element.name ?? '');
+      valueList.add(element.value ?? 0.0);
+    }
     return SubPage1(
-        allData: sectionsV4,
-        dataDistance: valueList[0].toString(),
-        dataSound: valueList[1].toString(),
-        dataHeart: valueList[2].toString(),
-        values: valueList);
+      allData: sectionsV4,
+      dataDistance: valueList[0].toString(),
+      dataSound: valueList[1].toString(),
+      dataHeart: valueList[2].toString(),
+      values: valueList,
+    );
   }
 }

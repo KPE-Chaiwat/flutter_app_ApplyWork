@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter SharedPreferences Demo',
       home: BlocProvider(
         create: (context) => SharedPreferanceCubit(),
-        child: HomePage(),
+        child: const HomePage(),
       ),
     );
   }

@@ -207,7 +207,10 @@ class SubPage1 extends StatelessWidget {
                 SizedBox(
                   height: 50,
                 ),
-                DonutChartWidgetV5(values: values),
+                DonutChartWidgetV5(
+                  values: values,
+                  strokeWidth: 10,
+                ),
                 SizedBox(
                   height: 50,
                 ),
